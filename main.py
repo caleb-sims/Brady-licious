@@ -75,15 +75,19 @@ elif user == 'Spock':
 
 
 # 5: Find Winner
-winner = 0
-print('Player 2 chose', cpu + '.')
 
-if cpu in user_class.wins:
-    winner = True
-elif cpu in user_class.loses:
-    winner = False
+def get_winner(cpu, wins_list):
+    winner = 0
+    if cpu in wins_list:
+        winner = True
+    elif cpu in wins_list:
+        winner = False
+    return winner
 
-if winner:
+
+print(f'Player 2 chose {cpu}.')
+
+if get_winner(cpu, user_class.wins):
     print('You win!')
-elif not winner:
+elif not get_winner(cpu, user_class.wins):
     print('You lose.')
