@@ -4,7 +4,8 @@ cpu_wins = 0
 user_wins = 0
 play_again = 'Y'
 
-while play_again in ['Y', 'y', 'Yes', 'yes']:
+while play_again in ['y']:
+
 
     # 1: Take Inputs
     user = input('Enter Rock, Paper, Scissors, Lizard, or Spock:\n')
@@ -103,7 +104,7 @@ while play_again in ['Y', 'y', 'Yes', 'yes']:
 
     # 6: Play again?
 
-    play_again = input('Play again? Enter "Y" or "N":\n')
+    play_again = input('Press "Y" to play again or "N" to end the game:\n').lower()
 
 
 print(f'Player wins: {user_wins}')
