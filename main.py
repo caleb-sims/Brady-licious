@@ -17,6 +17,8 @@ class Game:
         }
         self.user_wins = 0
         self.cpu_wins = 0
+        self.round_counter = 0
+        self.player_name = input('\nEnter your name:\n')
 
     def display_options(self):
         print("\nChoose your move:")
@@ -61,6 +63,7 @@ class Game:
             self.cpu_wins += 1
         else:
             print("🤝 It's a tie!")
+        self.round_counter += 1
 
     def play(self):
         while True:
@@ -74,6 +77,7 @@ class Game:
                     print("\n--- Final Score ---")
                     print(f"Player Wins: {self.user_wins}")
                     print(f"CPU Wins: {self.cpu_wins}")
+                    print(f'Win Percentage: {round((self.user_wins / self.round_counter)*100, 2)}%')
                     print("Thanks for playing!\n")
                     return
                 elif play_again in ['y', 'yes']:
