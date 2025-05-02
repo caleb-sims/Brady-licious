@@ -21,7 +21,7 @@ class Game:
         self.cpu_wins = 0
         self.round_counter = 0
         self.player = Player()
-    
+
     def display_options(self):
         print("\nChoose your move:")
         for key, move in self.moves.items():
