@@ -21,7 +21,9 @@ class Game:
         self.cpu_wins = 0
         self.round_counter = 0
         self.player = Player()
-
+    print("\nWelcome to Rock, Paper, Scissor+",
+          "\nThe game where you make a player and choose from one of five options against the CPU as you strive to dominate your opponent",
+          "\nCompete with your friends for the top of are all new Leaderboard!")
     def display_options(self):
         print("\nChoose your move:")
         for key, move in self.moves.items():
