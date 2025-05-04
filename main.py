@@ -25,6 +25,8 @@ class Game:
           "\nThe game where you make a player and choose from one of five options against the CPU as you strive to dominate your opponent",
           "\nCompete with your friends for the top of are all new Leaderboard!")
     def display_options(self):
+        print("\n \n")
+        print("-------------------------------------")
         print("\nChoose your move:")
         for key, move in self.moves.items():
             print(f"{key}. {move.display_name}")
