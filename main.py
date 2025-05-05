@@ -23,11 +23,12 @@ class Game:
         self.player = Player()
     print("\nWelcome to Rock, Paper, Scissor+",
           "\nThe game where you make a player and choose from one of five options against the CPU as you strive to dominate your opponent",
-          "\nCompete with your friends for the top of are all new Leaderboard!")
+          "\nCompete with your friends for the top of are all new Leaderboard! (Hint: Option 6 lets you know what beats what!)")
+    
     def display_options(self):
         print("\n \n")
         print("-------------------------------------")
-        print("\nChoose your move:")
+        print(f"\nRound {self.round_counter+1}: \n\nChoose your move:")
         for key, move in self.moves.items():
             print(f"{key}. {move.display_name}")
         print("6. Game key")
